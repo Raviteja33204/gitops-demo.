@@ -1,0 +1,16 @@
+apiVersion: argocd-image-updater.argoproj.io/v1alpha1
+kind: ImageUpdater
+metadata:
+  name: gitops-demo-updater
+  namespace: argocd
+spec:
+  commonUpdateSettings:
+    updateStrategy: semver
+  writeBackConfig:
+    method: argocd
+  applicationRefs:
+    - namePattern: "gitops-demo"
+      useAnnotations: true
+      images:
+        - alias: app
+          imageName: raviteja18166/gitops-demo
