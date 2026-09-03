@@ -15,8 +15,8 @@ spec:
         app: gitops-demo
     spec:
       containers:
-      - name: demo-app
-        image: raviteja18166/gitops-demo:v1.0.0
+      - name: gitops-demo
+        image: raviteja18166/gitops-demo:v2.0.0
         resources:
           requests:
             cpu: "100m"
